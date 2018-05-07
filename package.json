@@ -1,0 +1,25 @@
+{
+  "name": "dividend-tracker-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r4x0r/dividend-tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/r4x0r/dividend-tracker/issues"
+  },
+  "homepage": "https://github.com/r4x0r/dividend-tracker#readme",
+  "devDependencies": {
+    "mongoose": "^4.10.6"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
