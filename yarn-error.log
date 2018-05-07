@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js start
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js run build
 
 PATH: 
   C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;D:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Samsung\AllShare Framework DMS\1.3.23\;C:\Program Files\Samsung\AllShare Framework DMS\1.3.23\64bit\;D:\Program Files\AMD\ATI.ACE\Core-Static;D:\Program Files\Calibre2\;C:\Program Files\Git\cmd;D:\Program Files (x86)\Skype\Phone\;C:\Users\r4x0r1\AppData\Roaming\nvm;C:\Program Files\nodejs;D:\Ruby22-x64\bin;C:\Users\r4x0r1\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code\bin;C:\Users\r4x0r1\AppData\Roaming\nvm;C:\Program Files\nodejs;
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  SyntaxError: E:\Downloads\Documents\work\dividend-tracker\dividend-tracker-express\package.json: Unexpected string in JSON at position 619
+  SyntaxError: E:\Downloads\Documents\work\dividend-tracker\dividend-tracker-express\package.json: Unexpected token } in JSON at position 318
       at JSON.parse (<anonymous>)
       at C:\Users\r4x0r1\AppData\Roaming\nvm\v10.0.0\node_modules\yarn\lib\cli.js:1130:59
       at Generator.next (<anonymous>)
@@ -29,7 +29,9 @@ npm manifest:
     "main": "server.js",
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "nodemon ./server.js --exec babel-node"
+      "start-dev": "nodemon ./server.js --exec babel-node",
+      "start": "node dist/server.js",
+      "build": "babel ./server.js -d dist",
     },
     "repository": {
       "type": "git",
@@ -48,7 +50,7 @@ npm manifest:
       "presets": [
         "env"
       ]
-    }
+    },
     "devDependencies": {
       "babel-cli": "^6.26.0",
       "babel-preset-env": "^1.6.1",

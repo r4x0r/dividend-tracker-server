@@ -6,9 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-dev": "nodemon ./server.js --exec babel-node",
-    "start": "yarn run build && yarn run serve",
-    "build": "babel ./server.js -d dist",
-    "serve":"node dist/server.js"
+    "start": "node dist/server.js",
+    "build": "babel ./server.js -d dist"
   },
   "repository": {
     "type": "git",
