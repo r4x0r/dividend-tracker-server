@@ -2,7 +2,7 @@
   "name": "dividend-tracker-express",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./server.js --exec babel-node"
@@ -10,6 +10,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/r4x0r/dividend-tracker.git"
+  },
+  "engines": {
+    "node": "8.11.1"
   },
   "author": "",
   "license": "ISC",
