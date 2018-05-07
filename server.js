@@ -5,7 +5,7 @@ import express from 'express';
 
 // const express = require('express');
 
-const GRAPHQL_PORT = 3000;
+const GRAPHQL_PORT = process.env.PORT || 3000;
 
 const graphQLServer = express();
 
@@ -14,7 +14,7 @@ const graphQLServer = express();
 
 graphQLServer.get('/', (req, res) => res.send('Hello World!'))
 
-graphQLServer.listen(process.env.PORT || GRAPHQL_PORT, () =>
+graphQLServer.listen( GRAPHQL_PORT, () =>
   console.log(
     `GraphiQL is now running on http://localhost:${GRAPHQL_PORT}/graphiql`
   )
